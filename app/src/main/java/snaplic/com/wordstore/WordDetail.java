@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.LightingColorFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -16,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -66,6 +68,8 @@ public class WordDetail extends AppCompatActivity {
         wordExists=getIntent().getBooleanExtra(MainActivity.WORD_EXISTS,false);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.detailFab);
         final ArrayList<String> random=getIntent().getStringArrayListExtra(MainActivity.WORD_COUNT);
+
+        ((ProgressBar)findViewById(R.id.meaningProgress)).getIndeterminateDrawable().setColorFilter(new LightingColorFilter(0xFF000000, 0x03A9F2));
 
         if(random!=null)
         {
@@ -288,8 +292,12 @@ public class WordDetail extends AppCompatActivity {
         @Override
         protected void onPostExecute(String[] result)
         {
+
+
             if (destination.equals("meaning"))
             {
+                ((ProgressBar)findViewById(R.id.meaningProgress)).setVisibility(View.GONE);
+                ((ProgressBar)findViewById(R.id.usageProgress)).setVisibility(View.GONE);
                 if (result!=null)
                 {
                     wordMeaning.setText(result[0]);
@@ -307,6 +315,7 @@ public class WordDetail extends AppCompatActivity {
             }
             else
             {
+                ((ProgressBar)findViewById(R.id.descriptionProgress)).setVisibility(View.GONE);
                 if (result!=null)
                 {
                     StringBuilder builder=new StringBuilder();

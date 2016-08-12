@@ -65,10 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         savedWords=getWords();
-        if (savedWords.isEmpty())
-        {
-            savedWords.add("Add your words to see them here");
-        }
+
         mAdapter= new WordsAdapter(this,this,savedWords);
 
         mRecyclerView.setAdapter(mAdapter);
@@ -88,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 return s1.compareToIgnoreCase(s2);
             }
         });
+        if (savedWords.isEmpty())
+        {
+            savedWords.add("Add a new word");
+        }
         mAdapter.notifyDataSetChanged();
     }
 

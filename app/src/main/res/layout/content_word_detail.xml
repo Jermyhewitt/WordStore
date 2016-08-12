@@ -45,6 +45,14 @@
                     android:textColor="#000000"
                     android:text="Fetching data..."
                     android:textSize="15sp"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/meaningProgress"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:indeterminateTintMode="src_over"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -64,6 +72,16 @@
                     android:text="Fetching data..."
                     android:textSize="15sp"
                     />
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descriptionProgress"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:indeterminateTintMode="src_over"
+                    />
+
 
             </LinearLayout>
 
@@ -101,6 +119,14 @@
                     android:textColor="#000000"
                     android:text="Fetching data..."
                     android:textSize="15sp"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/usageProgress"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:indeterminateTintMode="src_over"
+                    />
 
             </LinearLayout>
 
