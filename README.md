@@ -12,7 +12,7 @@ to the database so that i can view the definition of the word if i should forget
 
 
 #Screenshots
-
 ![alt text](/Screenshot.jpeg?raw=true "Logo Title Text 1")   ![alt text](/Screenshot2.jpeg?raw=true "Logo Title Text 1")
+![alt text](/Screenshot3.png?raw=true "Logo Title Text 1")
 
 
